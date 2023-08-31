@@ -21,22 +21,22 @@ spec:
       - image: IMAGE_NAME_HERE
         name: accounts
         resources: {}
-        env:        
-          - name: DATABASE_HOST
-            value: postgresql
-          - name: DATABASE_NAME
-            valueFrom:
-              secretKeyRef:
+        env:
+        - name: DATABASE_HOST
+          value: postgresql 
+        - name: DATABASE_NAME
+          valueFrom:
+            secretKeyRef:
                 name: postgresql
                 key: database-name
-          - name: DATABASE_PASSWORD
-            valueFrom:
-              secretKeyRef:
+        - name: DATABASE_PASSWORD
+          valueFrom:
+            secretKeyRef:
                 name: postgresql
                 key: database-password
-          - name: DATABASE_USER
-            valueFrom:
-              secretKeyRef:
+        - name: DATABASE_USER
+          valueFrom:
+            secretKeyRef:
                 name: postgresql
                 key: database-user
 status: {}

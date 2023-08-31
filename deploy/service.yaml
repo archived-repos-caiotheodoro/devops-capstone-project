@@ -4,7 +4,7 @@ metadata:
   creationTimestamp: null
   labels:
     app: accounts
-  name: accounts-service
+  name: accounts
 spec:
   ports:
   - port: 8080
@@ -12,5 +12,6 @@ spec:
     targetPort: 8080
   selector:
     app: accounts
+  type: ClusterIP
 status:
   loadBalancer: {}
